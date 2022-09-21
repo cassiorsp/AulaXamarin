@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTeste.Views.TodosClientes"
+             Title="Todos Clientes">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar Item"
+                     Clicked="CadastrarCliente"/>
+    </ContentPage.ToolbarItems>
+
+    <CollectionView x:Name="collectionCliente"
+                    Margin="20"
+                    SelectionMode="Single">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical"
+                               ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        
+    </CollectionView>
+
+</ContentPage>
