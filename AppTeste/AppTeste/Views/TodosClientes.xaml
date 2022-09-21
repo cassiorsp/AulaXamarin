@@ -15,7 +15,39 @@
             <LinearItemsLayout Orientation="Vertical"
                                ItemSpacing="10"/>
         </CollectionView.ItemsLayout>
-        
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Label FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Código: " />
+                                <Span Text="{Binding Id}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label	FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Nome: " />
+                                <Span Text="{Binding Nome}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label	FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Data Nascimento: " />
+                                <Span Text="{Binding DataNascimento}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label Text="Nome: "/>
+                    <Label Text="{Binding Data}"/>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
     </CollectionView>
 
 </ContentPage>
