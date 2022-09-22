@@ -11,6 +11,5 @@ namespace AppTeste
             Routing.RegisterRoute(nameof(CadastroNota), typeof(CadastroNota));
             Routing.RegisterRoute(nameof(CadastroCliente), typeof(CadastroCliente));
         }
-
     }
 }

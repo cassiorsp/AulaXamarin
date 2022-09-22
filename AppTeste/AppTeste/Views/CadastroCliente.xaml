@@ -18,7 +18,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Label Text="Nome: " FontSize="20" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Nome: " FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
             <Entry Text="{Binding Nome}" FontSize="20" FontAttributes="Bold" Grid.Column="1" Grid.Row="0"/>
             <Label Text="Data Nascimento: " FontSize="20" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"/>
             <Entry Text="{Binding DataNascimento}" FontSize="20" FontAttributes="Bold" Grid.Column="1" Grid.Row="1"/>
