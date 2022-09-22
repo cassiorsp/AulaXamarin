@@ -7,7 +7,6 @@
         <ToolbarItem Text="Adicionar Item"
                      Clicked="CadastrarCliente"/>
     </ContentPage.ToolbarItems>
-
     <CollectionView x:Name="collectionCliente"
                     Margin="20"
                     SelectionMode="Single">
@@ -42,12 +41,8 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-
-                    <Label Text="Nome: "/>
-                    <Label Text="{Binding Data}"/>
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
-
 </ContentPage>

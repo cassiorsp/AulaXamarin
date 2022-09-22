@@ -24,9 +24,7 @@ namespace AppTeste.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            
             var notes = await objContext.TodasNotas();
-            
             collectionView.ItemsSource = notes.OrderBy(d => d.Data).ToList();
         }
 

@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace AppTeste.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TodosClientes : ContentPage
+    public partial class CadastroCliente : ContentPage
     {
-        public TodosClientes()
+        public CadastroCliente()
         {
             InitializeComponent();
-        }
-
-        private async void CadastrarCliente(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync(nameof(CadastroCliente));
         }
     }
 }

@@ -6,7 +6,7 @@
     <TabBar>
         <ShellContent Title="Notes"
                       Icon="icon_feed.png"
-                      ContentTemplate="{DataTemplate views:PaginaNotas}" />
+                      ContentTemplate="{DataTemplate views:TodosClientes}" />
 
     </TabBar>
 </Shell>

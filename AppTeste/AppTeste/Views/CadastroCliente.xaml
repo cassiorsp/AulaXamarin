@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTeste.Views.CadastroCliente">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <Label Margin="10" FontSize="30" 
+                   Text="Cadastro de Clientes"/>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Nome: " />
+                        <Span Text="{Binding Nome}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data Nascimento: " />
+                        <Span Text="{Binding DataNascimento}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Estado: " />
+                        <Span Text="{Binding Uf}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Cidade: " />
+                        <Span Text="{Binding Cidade}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Bairro: " />
+                        <Span Text="{Binding Bairro}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Rua: " />
+                        <Span Text="{Binding Rua}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="20" FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Numero: " />
+                        <Span Text="{Binding Numero}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Grid ColumnDefinitions="*,*">
+                <Button Text="Salvar"
+                    Clicked="SalvarCliente" />
+                <Button Grid.Column="1"
+                    Text="Excluir"/>
+                <!--Clicked="OnDeleteButtonClicked"/>-->
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
