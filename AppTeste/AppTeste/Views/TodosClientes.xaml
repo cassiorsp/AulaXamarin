@@ -16,16 +16,16 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout>
+                <StackLayout Margin="10,10,10,10">
                     <Label FontSize="20" FontAttributes="Bold">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Código: " />
+                                <Span Text="codigo: " />
                                 <Span Text="{Binding Id}"/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label	FontSize="20" FontAttributes="Bold">
+                    <Label FontSize="20" FontAttributes="Bold">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Nome: " />
@@ -33,11 +33,51 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label	FontSize="20" FontAttributes="Bold">
+                    <Label FontSize="20" FontAttributes="Bold">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Data Nascimento: " />
                                 <Span Text="{Binding DataNascimento}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Estado: " />
+                                <Span Text="{Binding Uf}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Cidade: " />
+                                <Span Text="{Binding Cidade}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Bairro: " />
+                                <Span Text="{Binding Bairro}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Rua: " />
+                                <Span Text="{Binding Rua}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="20" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Numero: " />
+                                <Span Text="{Binding Numero}"/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
