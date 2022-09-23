@@ -14,7 +14,6 @@
             <Setter Property="TextColor" Value="Black"/>
         </Style>
         <Style TargetType="Entry">
-            <Setter Property="Placeholder" Value="LightGray"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="TextColor" Value="Black"/>
         </Style>
@@ -25,19 +24,20 @@
         </Style>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="Medium"/>
-            <Setter Property="TextColor" Value="DarkBlue"/>
+            <Setter Property="TextColor" Value="Black"/>
             <Setter Property="FontAttributes" Value="Bold" />
         </Style>
         <Style TargetType="Button">
-            <Setter Property="BorderColor" Value="#ee9620" />
-            <Setter Property="BackgroundColor" Value="#ee9620"/>
-            <Setter Property="BorderWidth" Value="3" />
-            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderColor" Value="Black" />
+            <Setter Property="BackgroundColor" Value="AliceBlue"/>
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="TextColor" Value="Black" />
             <Setter Property="HorizontalOptions" Value="Center" />
-            <Setter Property="FontSize" Value="Large"/>
-            <Setter Property="CornerRadius" Value="10"/>
-            <Setter Property="HeightRequest" Value="55" />
-            <Setter Property="WidthRequest" Value="270" />
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="WidthRequest" Value="150" />
             <Setter Property="FontAttributes" Value="Bold" />
             <Setter Property="VerticalOptions" Value="StartAndExpand"/>
         </Style>

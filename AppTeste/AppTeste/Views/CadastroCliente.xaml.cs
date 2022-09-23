@@ -26,5 +26,14 @@ namespace AppTeste.Views
 
             await objContext.SalvarCliente(cliente);
         }
+
+        private void PegarData(object sender, DateChangedEventArgs e)
+        {
+            var cliente = (Cliente)BindingContext;
+
+            cliente.DataNascimento = DnCliente.Date;
+            
+            BindingContext = cliente;
+        }
     }
 }
