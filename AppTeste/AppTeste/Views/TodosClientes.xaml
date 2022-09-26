@@ -33,10 +33,10 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label FontSize="20" FontAttributes="Bold">
+                    <Label FontSize="20" >
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Data Nascimento: " />
+                                <Span Text="Data Nascimento: "  />
                                 <Span Text="{Binding DataNascimento}"/>
                             </FormattedString>
                         </Label.FormattedText>
