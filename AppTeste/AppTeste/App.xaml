@@ -23,9 +23,9 @@
             <Setter Property="TextColor" Value="Black"/>
         </Style>
         <Style TargetType="Label">
-            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="TextColor" Value="Black"/>
-            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontFamily" Value="waltographUI" />
         </Style>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="10"/>

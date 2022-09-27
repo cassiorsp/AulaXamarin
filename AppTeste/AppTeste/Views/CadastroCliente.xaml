@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
              x:Class="AppTeste.Views.CadastroCliente">
     <ContentPage.Content>
-        <StackLayout Margin="10">
-            <Label Text="Cadastro Cliente" HorizontalOptions="Center" FontSize="24"/>
+        <StackLayout Margin="5,15,5,5">
+            <Label Text="Meu Novo Cliente" HorizontalOptions="Center" FontSize="20"/>
             <Grid >
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
@@ -20,26 +21,34 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-
-                <Label Text="Nome: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Nome: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" VerticalOptions="Center"/>
                 <Entry Text="{Binding Nome}" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" />
-                <Label Text="Data Nascimento: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"/>
-                <DatePicker x:Name="DnCliente" DateSelected="PegarData" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" />
-                <Label Text="Estado: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="2"/>
-                <Entry Text="{Binding Uf}" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="2"/>
-                <Label Text="Cidade: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="3"/>
-                <Entry Text="{Binding Cidade}" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="3"/>
-                <Label Text="Bairro: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="4"/>
-                <Entry Text="{Binding Bairro}" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="4"/>
-                <Label Text="Rua: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="5"/>
-                <Entry Text="{Binding Rua}" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="5"/>
-                <Label Text="Numero: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="6"/>
-                <Entry Text="{Binding Numero}" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="6"/>
-                <Button Text="Salvar" Grid.Column="0" Clicked="SalvarCliente" Grid.Row="7" />
-                <Button  Text="Excluir" Grid.Column="1"  Grid.Row="7"/>
-                <!--Clicked="OnDeleteButtonClicked"/>-->
+                <Label Text="DN: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" VerticalOptions="Center"/>
+                <DatePicker x:Name="DnCliente" DateSelected="PegarData" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" >
+                    <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                </DatePicker>
+                <Label Text="UF: " FontSize="16"  FontAttributes="Bold" Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>
+                <Entry Text="{Binding Uf}" MaxLength="2" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="2" />
+                <Label Text="Cidade: " FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="3" VerticalOptions="Center"/>
+                <Entry Text="{Binding Cidade}" MaxLength="25" FontSize="14" FontAttributes="Bold" Grid.Column="1" Grid.Row="3"/>
+                <Label Text="Bairro: " FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="4" VerticalOptions="Center"/>
+                <Entry Text="{Binding Bairro}" FontSize="14" FontAttributes="Bold" Grid.Column="1" Grid.Row="4"/>
+                <Label Text="Rua: " FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="5" VerticalOptions="Center"/>
+                <Entry Text="{Binding Rua}" FontSize="14" FontAttributes="Bold" Grid.Column="1" Grid.Row="5"/>
+                <Label Text="Num: " FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="6" VerticalOptions="Center"/>
+                <Entry Text="{Binding Numero}"  Keyboard="Numeric" FontSize="14" FontAttributes="Bold" Grid.Column="1" Grid.Row="6">
+                    <Entry.Behaviors>
+                        <behaviorPack:MaxLengthValidationBehavior  MaxLength="2"/>
+                        <behaviorPack:NumberValidationBehavior/>
+                    </Entry.Behaviors>
+                </Entry>
+
+
 
             </Grid>
+            <Button Text="Salvar" Grid.Column="0" Clicked="SalvarCliente" Grid.Row="7" />
+            <Button  Text="Excluir" Grid.Column="1"  Grid.Row="7"/>
+            <!--Clicked="OnDeleteButtonClicked"/>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
