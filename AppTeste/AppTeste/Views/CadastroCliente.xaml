@@ -47,7 +47,7 @@
 
             </Grid>
             <Button Text="Salvar" Grid.Column="0" Clicked="SalvarCliente" Grid.Row="7" />
-            <Button  Text="Excluir" Grid.Column="1"  Grid.Row="7"/>
+            <Button  Text="Excluir" Grid.Column="1"  Grid.Row="7" Clicked="DeletarCliente" />
             <!--Clicked="OnDeleteButtonClicked"/>-->
         </StackLayout>
     </ContentPage.Content>

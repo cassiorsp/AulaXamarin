@@ -28,10 +28,18 @@ namespace AppTeste.Views
             BindingContext = Clientes;
             collectionCliente.ItemsSource = Clientes;
         }
-            private async void CadastrarCliente(object sender, EventArgs e)
+        private async void CadastrarCliente(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(CadastroCliente));
         }
-        
+
+        private async void ItemSelecionado(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection != null)
+            {
+                var cliente = (Cliente)e.CurrentSelection[0];
+                await Shell.Current.GoToAsync($"{nameof(CadastroCliente)}?{nameof(CadastroCliente.ClienteId)}={cliente.Id}");
+            }
+        }
     }
 }

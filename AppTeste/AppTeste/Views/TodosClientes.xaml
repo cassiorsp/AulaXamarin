@@ -11,7 +11,8 @@
 
     <CollectionView x:Name="collectionCliente"
                     Margin="20"
-                    SelectionMode="Single">
+                    SelectionMode="Single"
+                    SelectionChanged="ItemSelecionado">
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical"
                                ItemSpacing="10"/>

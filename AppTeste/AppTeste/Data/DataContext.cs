@@ -31,13 +31,28 @@ namespace AppTeste.Data
         }
         #endregion
         #region ---------------------Clientes---------------------
-        public Task<List<Cliente>> TodosClientes ()
+        public Task<List<Cliente>> TodosClientes()
         {
             return sqliteConn.Table<Cliente>().ToListAsync();
         }
         public Task<int> SalvarCliente(Cliente cliente)
         {
-            return sqliteConn.InsertAsync(cliente);
+            if (cliente.Id == 0)
+            {
+                return sqliteConn.InsertAsync(cliente);
+            }
+            else
+            {
+                return sqliteConn.UpdateAsync(cliente);
+            }
+
+        }
+
+        public Task<int> DeletarCliente(Cliente cliente)
+        {
+
+            return sqliteConn.DeleteAsync(cliente);
+
         }
 
         #endregion

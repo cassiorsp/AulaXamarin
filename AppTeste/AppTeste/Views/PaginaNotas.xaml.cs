@@ -40,7 +40,7 @@ namespace AppTeste.Views
         //    {
         //        // Navigate to the NoteEntryPage, passing the filename as a query parameter.
         //        Notas note = (Notas)e.CurrentSelection.FirstOrDefault();
-        //        await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Filename}");
+        //        //await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Filename}");
         //    }
         //}
     }

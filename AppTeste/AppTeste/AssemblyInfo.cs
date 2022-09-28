@@ -4,4 +4,4 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 [assembly: ExportFont("angelina.TTF", Alias = "angelina")]
 [assembly: ExportFont("LOKICOLA.TTF", Alias = "lokicola")]
-[assembly: ExportFont("waltographUI.ttf", Alias = "waltographUI ")]
+[assembly: ExportFont("waltographUI.ttf", Alias = "waltographUI")]
