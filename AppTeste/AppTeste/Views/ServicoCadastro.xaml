@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTeste.Views.ServicoCadastro"
+              Title="Cadastro Cliente">
+    <ContentPage.Content>
+        <StackLayout Margin="5,15,5,5">
+            <Label Text="Meu Novo Cliente" HorizontalOptions="Center" FontSize="20"/>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Cliente: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" VerticalOptions="Center"/>
+                <Picker x:Name="ServicoPiker" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="Descrição: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" VerticalOptions="Center"/>
+                <Entry Text="{Binding Descricao}" MaxLength="2" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" />
+                <Label Text="Data: " FontSize="16" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>
+                <DatePicker x:Name="Data" DateSelected="PegarData" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="2" >
+                    <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                </DatePicker>
+            </Grid>
+            <Button Text="Salvar" Grid.Column="0" Clicked="SalvarCliente" Grid.Row="7" />
+            <Button  Text="Excluir" Grid.Column="1"  Grid.Row="7" Clicked="DeletarCliente" />
+            <!--Clicked="OnDeleteButtonClicked"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -11,7 +11,7 @@ namespace AppTeste.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [QueryProperty(nameof(ClienteId), nameof(ClienteId))]
-    public partial class CadastroCliente : ContentPage
+    public partial class ClienteCadastro : ContentPage
     {
         //PROPRIEDADE QUE ESTÁ RECEBENDO VALOR DA TELA TODOS CLIENTES
         public int ClienteId {set => CarregaCliente(value);}
@@ -24,7 +24,7 @@ namespace AppTeste.Views
             }
         }
         DataContext objContext;
-        public CadastroCliente()
+        public ClienteCadastro()
         {
             InitializeComponent();
             objContext = new DataContext();

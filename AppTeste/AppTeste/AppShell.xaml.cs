@@ -9,7 +9,8 @@ namespace AppTeste
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(CadastroNota), typeof(CadastroNota));
-            Routing.RegisterRoute(nameof(CadastroCliente), typeof(CadastroCliente));
+            Routing.RegisterRoute(nameof(ClienteCadastro), typeof(ClienteCadastro));
+            Routing.RegisterRoute(nameof(ServicoCadastro), typeof(ServicoCadastro));
         }
     }
 }

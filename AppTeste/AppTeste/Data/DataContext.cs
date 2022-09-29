@@ -18,6 +18,7 @@ namespace AppTeste.Data
             sqliteConn.CreateTableAsync<Notas>().Wait();
             //CRIA A TABELA CASO NÃO EXISTA...
             sqliteConn.CreateTableAsync<Cliente>().Wait();
+            sqliteConn.CreateTableAsync<Servico>().Wait();
         }
         #region ---------------------Notas---------------------
         public Task<List<Notas>> TodasNotas()
@@ -45,17 +46,35 @@ namespace AppTeste.Data
             {
                 return sqliteConn.UpdateAsync(cliente);
             }
-
         }
-
         public Task<int> DeletarCliente(Cliente cliente)
         {
 
             return sqliteConn.DeleteAsync(cliente);
 
         }
-
         #endregion
-    }
+        #region ---------------------Servico---------------------
+        public Task<List<Servico>> TodosServicos()
+        {
+            return sqliteConn.Table<Servico>().ToListAsync();
+        }
+        public Task<int> SalvarServico(Servico servico)
+        {
+            if (servico.Id == 0)
+            {
+                return sqliteConn.InsertAsync(servico);
+            }
+            else
+            {
+                return sqliteConn.UpdateAsync(servico);
+            }
+        }
+        public Task<int> DeletarServico(Servico servico)
+        {
+            return sqliteConn.DeleteAsync(servico);
+        }
+        #endregion
+    } 
 }
 

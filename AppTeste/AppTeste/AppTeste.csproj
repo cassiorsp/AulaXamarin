@@ -29,25 +29,37 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\CadastroNota.xaml.cs">
-      <DependentUpon>CadastroNota.xaml</DependentUpon>
+    <Compile Update="Views\ClienteCadastro.xaml.cs">
+      <DependentUpon>ClienteCadastro.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\PaginaNotas.xaml.cs">
-      <DependentUpon>PaginaNotas.xaml</DependentUpon>
+    <Compile Update="Views\NotaCadastro.xaml.cs">
+      <DependentUpon>NotaCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NotaBuscar.xaml.cs">
+      <DependentUpon>NotaBuscar.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ClienteBuscar.xaml.cs">
+      <DependentUpon>ClienteBuscar.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\CadastroCliente.xaml">
+    <EmbeddedResource Update="Views\ClienteCadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CadastroNota.xaml">
+    <EmbeddedResource Update="Views\NotaCadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\PaginaNotas.xaml">
+    <EmbeddedResource Update="Views\NotaBuscar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\TodosClientes.xaml">
+    <EmbeddedResource Update="Views\ClienteBuscar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ServicoBuscar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ServicoCadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

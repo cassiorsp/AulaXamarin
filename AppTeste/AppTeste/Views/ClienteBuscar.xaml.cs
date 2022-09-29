@@ -11,10 +11,10 @@ using AppTeste.Models;
 namespace AppTeste.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TodosClientes : ContentPage
+    public partial class ClienteBuscar : ContentPage
     {
         private DataContext objContext;
-        public TodosClientes()
+        public ClienteBuscar()
         {
             InitializeComponent();
             objContext = new DataContext();
@@ -30,7 +30,7 @@ namespace AppTeste.Views
         }
         private async void CadastrarCliente(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(CadastroCliente));
+            await Shell.Current.GoToAsync(nameof(ClienteCadastro));
         }
 
         private async void ItemSelecionado(object sender, SelectionChangedEventArgs e)
@@ -38,7 +38,7 @@ namespace AppTeste.Views
             if (e.CurrentSelection != null)
             {
                 var cliente = (Cliente)e.CurrentSelection[0];
-                await Shell.Current.GoToAsync($"{nameof(CadastroCliente)}?{nameof(CadastroCliente.ClienteId)}={cliente.Id}");
+                await Shell.Current.GoToAsync($"{nameof(ClienteCadastro)}?{nameof(ClienteCadastro.ClienteId)}={cliente.Id}");
             }
         }
     }
